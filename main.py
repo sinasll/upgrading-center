@@ -179,7 +179,7 @@ async def main() -> None:
 
         logger.info("Bot and web server started. Press Ctrl+C to stop.")
         await application.updater.start_polling()
-        await application.updater.idle()
+        await application.run_polling()
 
     except Exception as e:
         logger.error(f"Error starting bot: {e}")
